@@ -119,8 +119,8 @@ a:hover { color: #6f826f; }
 }
 
 .main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: column;
+  width: 600px;
   gap: 8px;
 }
 
@@ -137,10 +137,6 @@ a:hover { color: #6f826f; }
 .side {
   background: #fff;
   border: 1px dashed #c7d8c4;
-}
-
-.box {
-width: 600px;
 }
 
 .side {
@@ -266,36 +262,9 @@ width: 600px;
 
 
 
-    <!-- Intro / currently starts -->
-    <div class="intro">
-
-
-        <div class="note">
-            <div class="title"><img src="https://itinerae.neocities.org/free/34/floral.gif" alt="x" class="icon"> welcome note</div>
-          <p> <b>Bold text.</b> <i>Italic text.</i> <a href="#">Link.</a><br>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu pretium tellus. Ut sem lacus, ornare non maximus ac, dapibus a magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum vitae vulputate massa, vel pellentesque ligula.
-            </p>
-        </div>
-
-
-        <div class="side">
-            <div class="title"> currently</div>
-            <div class="row"><img src="https://itinerae.neocities.org/free/34/arrow.webp" alt="x" class="icon"> <b>reading</b> something</div>
-            <div class="row"><img src="https://itinerae.neocities.org/free/34/arrow.webp" alt="x" class="icon"> <b>drinking</b> something</div>
-            <div class="row"><img src="https://itinerae.neocities.org/free/34/arrow.webp" alt="x" class="icon"> <b>listening</b> something</div>
-            <div class="row"><img src="https://itinerae.neocities.org/free/34/arrow.webp" alt="x" class="icon"> <b>weather</b> sunny and warm</div>
-        </div>
-
-
-    </div>
-    <!-- Intro / currently ends -->
-
-
-
-
  
 
- <div class="main">
+ <div class="side">
 
         <div class="box">
             <div class="title"><img src="https://itinerae.neocities.org/free/34/floral.gif" alt="x" class="icon"> list of updates</div>
@@ -318,7 +287,7 @@ width: 600px;
     <!-- main starts -->
     <div class="main">
 
-        <div class="side">
+        <div class="box">
             <div class="title"><img src="https://itinerae.neocities.org/free/34/floral.gif" alt="x" class="icon"> list of updates</div>
             <ul class="list">
                 <li><img src="https://itinerae.neocities.org/free/34/arrow.webp" alt="x" class="icon"> <b>14/04/2026</b> updates updates updates.</li>
@@ -335,7 +304,7 @@ width: 600px;
           
         </div>
 
-       <div class="main">
+       <div class="side">
 
         <div class="box">
             <div class="title"><img src="https://itinerae.neocities.org/free/34/floral.gif" alt="x" class="icon"> list of updates</div>
