@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>itinerae : little garden</title>
+<link rel="shortcut icon" href="https://64.media.tumblr.com/9bf61400f79b3f645ee167fcd6482d9b/3a988fb42c1b5b51-e6/s75x75_c1/ef075fff2fc676fa57825cc302ff2def51166815.gifv">
+
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, tahoma, verdana, sans-serif;
+}
+
+body {
+  background: #fcfdfc url(https://itinerae.neocities.org/bgs/lightgrid.gif);
+  padding: 32px;
+  font-size: 11px;
+  color: #888;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+a { color: #7f907f; text-decoration: none; }
+a:hover { color: #6f826f; }
+
+.container {
+  max-width: 660px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  position: relative;
+  background: rgba(252, 253, 252, 0.96);
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.55);
+}
+
+.header {
+  position: relative;
+  overflow: hidden;
+  padding: 40px 10px 30px;
+  text-align: center;
+  border: 1px dashed #d5e0d1;
+  border-radius: 4px;
+  background:linear-gradient(rgba(255, 255, 255, 0.65), rgba(248, 251, 248, 0.85)), url("https://i.pinimg.com/originals/39/de/10/39de103cdec7a66b9477759a363dc454.gif");
+  background-size: cover;
+  background-position: center;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.3), transparent 70%);
+  pointer-events: none;
+}
+
+.header-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.site-name {
+  margin-bottom: 4px;
+  color: #8fa18f;
+  letter-spacing: 2px;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
+  font: italic 19px georgia, serif;
+}
+
+.sub-title {
+  color: #9aa79a;
+  letter-spacing: 2px;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);
+  font-size: 10px;
+}
+
+.navi {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 6px;
+}
+
+.navi a {
+  display: block;
+  padding: 3px 5px;
+  text-align: center;
+  text-transform: lowercase;
+  color: #f8fbf7;
+  background: #c7d8c4;
+  border: 1px solid #c7d8c4;
+  border-radius: 4px;
+  transition: 0.2s ease;
+  font: italic 13px georgia, serif;
+}
+
+.navi a:hover {
+    color:#888;
+  background: #eef5ee;
+  transform: translateY(-1px);
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 8px;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.note,
+.now,
+.box {
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.note,
+.box {
+  background: #fff;
+  border: 1px dashed #c7d8c4;
+}
+
+.now {
+  background: #fbfcfa;
+  border: 1px dashed #c7d8c4;
+}
+
+.soft {
+  background: #fbfcfa;
+}
+
+.title {
+  margin-bottom: 6px;
+  color: #8fa18f;
+  text-transform: lowercase;
+  font: italic 14px georgia, serif;
+}
+
+.row {
+  padding: 2px 0;
+  border-bottom: 1px dotted #e5ece3;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.list {
+  list-style: none;
+}
+
+.list li {
+  padding: 2px 0;
+  border-bottom: 1px dotted #e7eee5;
+}
+
+.list li:last-child {
+  border-bottom: none;
+}
+
+.full {
+  grid-column: span 2;
+}
+
+.quote {
+  padding: 12px 10px;
+  text-align: center;
+  color: #8f9e8f;
+  background: #fafcf9;
+  border: 1px dashed #d5dfd2;
+  font: italic 13px georgia, serif;
+}
+
+.footer {
+  padding: 8px;
+  text-align: center;
+  color: #96a396;
+  background: #f9fbf9;
+  border: 1px solid #e3ebe2;
+  border-radius: 4px;
+}
+
+.icon {
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .navi {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .intro,
+  .top,
+  .main {
+    grid-template-columns: 1fr;
+  }
+
+  .full {
+    grid-column: span 1;
+  }
+}
+</style>
+</head>
+
+  
+  
+<body>
+  
+  
+<!-- Container starts -->
+<div class="container">
+
+    <!-- Header -->
+    <div class="header">
+
+        <div class="header-inner">
+            <img src="https://itinerae.neocities.org/free/34/clovers.gif" alt="x" class="icon">
+            <div class="site-name">your site name</div>
+            <div class="sub-title">slogan / latest update / something</div>
+        </div>
+
+    </div>
+    <!-- Header ends -->
+
+
+
+
+    <!-- Navi starts -->
+    <div class="navi">
+        <a href="#">Link here</a>
+        <a href="#">Link here</a>
+        <a href="#">Link here</a>
+        <a href="#">Link here</a>
+        <a href="#">Link here</a>
+        <a href="#">Link here</a>
+    </div>
+    <!-- Navi ends -->
+
+
+
+
+    <!-- Intro / currently starts -->
+    <div class="intro">
+
+
+        <div class="note">
+            <div class="title"><img src="https://itinerae.neocities.org/free/34/floral.gif" alt="x" class="icon"> welcome note</div>
+          <p> <b>Bold text.</b> <i>Italic text.</i> <a href="#">Link.</a><br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu pretium tellus. Ut sem lacus, ornare non maximus ac, dapibus a magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum vitae vulputate massa, vel pellentesque ligula.
+            </p>
+        </div>
+
+
+        <div class="now">
+            <div class="title"> currently</div>
+            <div class="row"><img src="https://itinerae.neocities.org/free/34/arrow.webp" alt="x" class="icon"> <b>reading</b> something</div>
+            <div class="row"><img src="https://itinerae.neocities.org/free/34/arrow.webp" alt="x" class="icon"> <b>drinking</b> something</div>
+            <div class="row"><img src="https://itinerae.neocities.org/free/34/arrow.webp" alt="x" class="icon"> <b>listening</b> something</div>
+            <div class="row"><img src="https://itinerae.neocities.org/free/34/arrow.webp" alt="x" class="icon"> <b>weather</b> sunny and warm</div>
+        </div>
+
+
+    </div>
+    <!-- Intro / currently ends -->
+
+
+
+
+    <!-- top (3 boxes) starts -->
+    <div class="top">
+
+        <div class="box">
+            <div class="title"> profile</div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu pretium tellus. Ut sem lacus, ornare non maximus ac, dapibus a magna. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+            </p>
+        </div>
+
+
+        <div class="box soft">
+            <div class="title"> small joys</div>
+            <ul class="list">
+                <li><img src="https://itinerae.neocities.org/free/34/fruity.gif" alt="x" class="icon"> fresh sheets</li>
+                <li><img src="https://itinerae.neocities.org/free/34/fruity.gif" alt="x" class="icon"> open windows</li>
+                <li><img src="https://itinerae.neocities.org/free/34/fruity.gif" alt="x" class="icon"> handwritten notes</li>
+                <li><img src="https://itinerae.neocities.org/free/34/fruity.gif" alt="x" class="icon"> tiny details</li>
+                <li><img src="https://itinerae.neocities.org/free/34/fruity.gif" alt="x" class="icon"> summer mornings</li>
+            </ul>
+        </div>
+
+
+        <div class="box">
+            <div class="title"><img src="https://itinerae.neocities.org/free/34/floral.gif" alt="x" class="icon"> title here</div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu pretium tellus. Ut sem lacus, ornare non maximus ac, dapibus a magna. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+            </p>
+        </div>
+
+    </div>
+    <!-- top (3 boxes) ends -->
+
+
+
+
+    <!-- main starts -->
+    <div class="main">
+
+        <div class="box">
+            <div class="title"><img src="https://itinerae.neocities.org/free/34/floral.gif" alt="x" class="icon"> list of updates</div>
+            <ul class="list">
+                <li><img src="https://itinerae.neocities.org/free/34/arrow.webp" alt="x" class="icon"> <b>14/04/2026</b> updates updates updates.</li>
+                <li><img src="https://itinerae.neocities.org/free/34/arrow.webp" alt="x" class="icon"> <b>14/04/2026</b> updates updates updates.</li>
+                <li><img src="https://itinerae.neocities.org/free/34/arrow.webp" alt="x" class="icon"> <b>14/04/2026</b> updates updates updates.</li>
+                <li><img src="https://itinerae.neocities.org/free/34/arrow.webp" alt="x" class="icon"> <b>14/04/2026</b> updates updates updates.</li>
+            </ul>
+        </div>
+
+
+
+        <div class="box soft">
+            <div class="title"> title here</div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu pretium tellus. Ut sem lacus, ornare non maximus ac, dapibus a magna. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+            </p>
+        </div>
+
+
+        <div class="box full quote">
+            “A quote, status or just a full width text section.”
+          
+        </div>
+
+
+        <div class="box">
+            <div class="title"> title here</div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu pretium tellus. Ut sem lacus, ornare non maximus ac, dapibus a magna. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+            </p>
+        </div>
+
+
+
+        <div class="box">
+            <div class="title"> title here</div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu pretium tellus. Ut sem lacus, ornare non maximus ac, dapibus a magna. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+            </p>
+        </div>
+
+
+
+
+
+        <div class="footer full"> <!-- PLEASE DON'T REMOVE THE CREDIT "layout made by itinerae" !! Thank you. -->
+            <p>
+                <b>Layout made by <a href="https://itinerae.org" target="_blank">Itinerae.</a> </b> Pixels from <a href="https://webdec.neocities.org" target="_blank">here.</a>
+                <br><u>Do not remove the credit if you use this layout</u> ! :)
+            </p>
+        </div>
+
+
+
+    </div>
+    <!-- main ends -->
+
+
+
+
+</div>
+<!-- container ends. -->
+
+</body>
+</html>
+            
