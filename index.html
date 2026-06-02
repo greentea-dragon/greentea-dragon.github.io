@@ -120,12 +120,12 @@ a:hover { color: #6f826f; }
 
 .content {
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   grid-template-rows: 3fr;
 }
 
 .main {
-  flex-grow: 2;
+  flex: 2;
   gap: 8px;
 }
 
@@ -145,7 +145,7 @@ a:hover { color: #6f826f; }
 }
 
 .side {
-  flex-grow: 1;
+  flex: 1;
 }
 
 .now {
@@ -186,19 +186,6 @@ a:hover { color: #6f826f; }
   border-bottom: none;
 }
 
-.full {
-  grid-column: span 2;
-}
-
-.quote {
-  padding: 12px 10px;
-  text-align: center;
-  color: #8f9e8f;
-  background: #fafcf9;
-  border: 1px dashed #d5dfd2;
-  font: italic 13px georgia, serif;
-}
-
 .footer {
   padding: 8px;
   text-align: center;
@@ -221,9 +208,6 @@ a:hover { color: #6f826f; }
   .top {
     grid-template-columns: 1fr;
   }
-
-  .full {
-    grid-column: span 1;
   }
 }
 </style>
